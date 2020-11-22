@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {fetchAccounts} from '../actions/fetchAccounts'
+import {fetchAccounts} from './actions/fetchAccounts'
 
 
 class App extends React.Component {
