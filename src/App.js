@@ -1,6 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import {fetchAccounts} from '../actions/fetchAccounts'
+
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchAccounts()
+  }
+
   render() {
     return (
       <div className="App">
@@ -11,4 +19,10 @@ class App extends React.Component {
   
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    accounts: state.accounts
+  }
+}
+
+export default connect(mapStateToProps, {fetchAccounts})(App)
