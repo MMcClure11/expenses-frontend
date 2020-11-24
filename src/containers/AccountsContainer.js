@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchAccounts} from '../actions/fetchAccounts'
+import Accounts from '../components/Accounts'
+import AccountInput from '../components/AccountInput'
 
 
 class AccountsContainer extends React.Component {
@@ -12,7 +14,8 @@ class AccountsContainer extends React.Component {
   render() {
       return (
           <div>
-            Accounts Container
+            <AccountInput />
+            <Accounts accounts={this.props.accounts} />
           </div>
       )
   }
